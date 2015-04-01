@@ -55,5 +55,26 @@ export default Ember.Component.extend(EventsMixin,{
     if (!this.toggle) {
       this.set('active',false);
     }
+  },
+  
+  /*
+   * Allow binding of actions to key-stroke events
+   */
+ 
+  keyPress:function(){
+    if (this.get('key-press')){
+      this.sendAction('key-press');
+    }
+  },
+  keyDown:function(){
+    if (this.get('key-down')){
+      this.sendAction('key-down');
+    }
+  },
+  keyUp:function(){
+    if (this.get('key-up')){
+      this.sendAction('key-up');
+    }
+    console.log(this.get('key-up'))
   }
 });
