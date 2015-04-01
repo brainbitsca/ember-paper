@@ -75,6 +75,5 @@ export default Ember.Component.extend(EventsMixin,{
     if (this.get('key-up')){
       this.sendAction('key-up');
     }
-    console.log(this.get('key-up'))
   }
 });
